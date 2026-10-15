@@ -3,15 +3,32 @@ package src.arrays;
 public class LargestSmallest {
 
     int largestElement (int [] arr){
-        return 2;
+        int largest= Integer.MIN_VALUE;
+
+        for(int i=0; i< arr.length;i++){
+            if(largest <arr[i]){
+                largest =arr[i];
+
+            }
+            
+
+        }
+        return largest;
     }
 
     int smallestElement(int [] arr){
-        return 4;
+        int smallest = Integer.MAX_VALUE;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]<smallest){
+                smallest = arr[i];
+            }
+        }
+        
+        return smallest;
     }
 
     int [] largestSmallest (int [] arr){
-        return new int []{1,2};
+        return new int []{largestElement(arr),smallestElement(arr)};
     }
 
 
